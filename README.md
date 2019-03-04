@@ -13,7 +13,8 @@ A simple file system walker with the goal of discovering duplicated files.
 
 #### Safe
 
-filewalk shouldn't affect any files it is walking.
+filewalk shouldn't modify any files it is walking.
+It will only potentially read them, but probably only stat them.
 It can write only to a designated output file or stdout.
 
 #### Fast
@@ -31,4 +32,4 @@ It should be able to handle reasonable failures like being stopped by the user, 
 #### Simple
 
 filewalk should have minimal configuration and minimal options.
-It should do the one thing it is trying to do well.
+It should do well only the one thing it is trying to do.
