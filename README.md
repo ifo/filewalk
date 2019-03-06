@@ -40,8 +40,11 @@ It should do well only the one thing it is trying to do.
 
 filewalk will output to a file or standard out.
 The format will be [jsonlines](jsonlines.org).
-Protobuf was considered, but I am less familiar with it, and ideally the output will be human readable.
-It will be possible to move to protobuf for output later.
+
+Protobuf was considered for this purpose due to its fast nature.
+However, I am less familiar with it, and unsure how to have the output remain both human readable and to use it when writing to an append only log.
+However, if those are later determined, it will be possible to move to protobuf for output.
+Using json lines is not carved in stone.
 
 The output file will be unsorted, as the order of walking can't be guaranteed.
 It may be valuable to sort the output, but not necessary to do so for the sake of the cache.
